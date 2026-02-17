@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36915.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet_API_14_API_2_API-call", "Dotnet_API_14_API_2_API-call\Dotnet_API_14_API_2_API-call.csproj", "{78BA0E31-6F0D-4DC8-9092-EBB671BE17DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2nd_API_", "2nd_API_\2nd_API_.csproj", "{8BE65D9B-13C9-48CD-ABDC-4A58A9329ED5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{78BA0E31-6F0D-4DC8-9092-EBB671BE17DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BA0E31-6F0D-4DC8-9092-EBB671BE17DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BA0E31-6F0D-4DC8-9092-EBB671BE17DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE65D9B-13C9-48CD-ABDC-4A58A9329ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE65D9B-13C9-48CD-ABDC-4A58A9329ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE65D9B-13C9-48CD-ABDC-4A58A9329ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE65D9B-13C9-48CD-ABDC-4A58A9329ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

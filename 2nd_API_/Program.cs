@@ -1,6 +1,5 @@
-using Dotnet_API_14_API_2_API_call.Data;
-using Dotnet_API_14_API_2_API_call.Services;
-using Microsoft.EntityFrameworkCore;
+using _2nd_API_.Services;
+using _2nd_API_.Services.Interface;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddDbContext<HotelDbContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IHotelService, HotelService>();
+// Register HttpClient
+builder.Services.AddHttpClient<IExternalHotelService, ExternalHotelService>()
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback =
+                HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+        });
+
+// Dependency Injection
+builder.Services.AddScoped<IExternalHotelService, ExternalHotelService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
